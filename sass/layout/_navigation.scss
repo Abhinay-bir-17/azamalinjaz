@@ -1,0 +1,38 @@
+.navigation{
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+        position: fixed;
+        top: 0;
+        background: white;
+        z-index:100;
+        width: 100%;
+    &__nav{
+        min-height: 12vh;
+        margin: auto;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1{
+            flex: 1;
+        }
+    }
+    &__list{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+
+    }
+    &__item{
+        color: black;
+        text-decoration: none;
+    }
+    &__bubble{
+        position: absolute;
+        z-index: -2;
+        background: linear-gradient(to right top,#642b73,#c6426e);
+        transform: scale(3);
+        transition: all 0.5s;
+    }
+
+}
