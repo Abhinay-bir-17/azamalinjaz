@@ -1,0 +1,62 @@
+// pricing-table is now services
+// pricing-card  is now services-card
+// pricing-card-header is now services-card--header
+// price is npw services--price
+
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    // width: min(1100px,100%);
+    margin: auto;
+    font-size:20px;
+
+  &__card{
+    flex: 1;
+    max-width: 360px;
+    background-color: #fff;
+    margin: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    color: #2d2d2d;
+    transition: .3s linear;
+    &--header{                
+        background-color: #0fbcf9;
+        display: inline-block;
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 0 0 20px 20px;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: .4s linear;
+    
+    }
+    &:hover{
+        .services__card--header{
+            box-shadow: 0 0 0 23em #0fbcf9;
+        }
+        color: white;
+        .services__card--price{
+            color: white;
+        }
+
+    }
+    &--price{        
+        font-size: 70px;
+        color: #0fbcf9;
+        margin: 40px 0;
+        transition: .2s linear;
+    }
+    sup,span{
+        font-size: 22px;
+        font-weight: 700;
+    }
+    li{
+        font-size: 16px;
+        padding: 10px 0;
+        text-transform: uppercase;      
+    }
+    }
+}

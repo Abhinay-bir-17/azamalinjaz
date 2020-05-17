@@ -1,0 +1,14 @@
+.heading-primary{
+    color:white;
+    text-transform: uppercase;
+
+    &--main{
+        display: block;
+        font-size: 6rem;
+        font-weight: 600;
+        letter-spacing: 2;
+    }
+    &--sub{
+
+    }
+}

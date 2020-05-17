@@ -1,18 +1,23 @@
 .section-slideshow{
-    // background: linear-gradient(to right top,#642b73,#c6426e);
+    background: linear-gradient(to right top,rgba(0,0,0,0.4),rgba(0,0,0,0.2));
     height: 85vh;
 }
 .section-question{
     // background: linear-gradient(to right top,#36d1dc, #5b86e5 );
     padding: 25rem 0;   
+    background-image: url(../img/HowCanWeHelpYou.jpg);
+    background-size: cover;   
+    position: relative;
 }
 
 .section-services{
-    // background: linear-gradient(to right top,#642b73,#c6426e);
+    background: linear-gradient(to right top,#642b73,#c6426e);
+    min-height: 100vh;
 }
 
 .section-contact{
     // background: linear-gradient(to right top,#642b73,#c6426e);
+    min-height: 100vh;
 }
 main{
     margin-top: 9vh;

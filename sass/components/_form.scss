@@ -1,0 +1,41 @@
+.contact{
+    background: url(/img/bg.png) no-repeat center;    
+    padding: 40px 0;
+    background-size: cover;
+    h1{
+        color: white;
+
+    }
+    &__border{
+        margin: 30px auto;
+        width: 100px;
+        height: 3px;
+        background: white; 
+    }
+    &__form{    
+        max-width: 600px;
+        margin: auto;
+        padding: 0 10px;
+        overflow: hidden;
+        &--text{
+            display:block;
+            width: 100%;
+            margin: 15px 0;
+            background: #111;
+            border: 0;
+            padding: 20px 40px;
+            outline: none;
+            color: #ddd;
+            transition: 0.5s linear;
+
+            &:focus{
+                box-shadow: 0 0 10px 4px #34495e;
+            }
+        
+        }
+        textarea{
+            resize: none;
+            height: 100px;
+        }
+    }
+}

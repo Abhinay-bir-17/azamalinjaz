@@ -8,6 +8,137 @@ html {
 body {
   box-sizing: border-box; }
 
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+.heading-primary {
+  color: white;
+  text-transform: uppercase; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 600;
+    letter-spacing: 2; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-notsocenter-text {
+  position: absolute;
+  left: 4%;
+  top: 22%; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.btn, .btn:link, .btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block; }
+
+.btn--main {
+  background-image: linear-gradient(120deg, #1ca9c9, #0073cf, #1ca9c9);
+  color: white; }
+
+.btn--sub {
+  background-image: linear-gradient(120deg, #1ca9c9, #0073cf, #1ca9c9);
+  color: white;
+  border: 2px solid white; }
+
+.btn:hover {
+  background-position: 100%;
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn--order {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border: 2px solid #0fbcf9;
+  color: #0fbcf9;
+  padding: 1px 4px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: .3s linear; }
+  .btn--order:hover {
+    background-color: #0fbcf9;
+    color: white; }
+
+.btn--contact {
+  border: 1px solid #3498db;
+  background: white;
+  color: #3498db;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  float: right; }
+  .btn--contact:hover {
+    color: white; }
+    .btn--contact:hover::before {
+      height: 180%; }
+  .btn--contact::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.8s;
+    top: 0;
+    border-radius: 0 0 50% 50%; }
+
 .navigation {
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
   position: fixed;
@@ -40,10 +171,21 @@ body {
     transition: all 0.5s; }
 
 .section-slideshow {
+  background: linear-gradient(to right top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
   height: 85vh; }
 
 .section-question {
-  padding: 25rem 0; }
+  padding: 25rem 0;
+  background-image: url(../img/HowCanWeHelpYou.jpg);
+  background-size: cover;
+  position: relative; }
+
+.section-services {
+  background: linear-gradient(to right top, #642b73, #c6426e);
+  min-height: 100vh; }
+
+.section-contact {
+  min-height: 100vh; }
 
 main {
   margin-top: 9vh; }
@@ -79,3 +221,125 @@ main {
 input[name="r"] {
   position: absolute;
   visibility: hidden; }
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+  font-size: 20px; }
+  .services__card {
+    flex: 1;
+    max-width: 360px;
+    background-color: #fff;
+    margin: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    color: #2d2d2d;
+    transition: .3s linear; }
+    .services__card--header {
+      background-color: #0fbcf9;
+      display: inline-block;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 0 0 20px 20px;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: .4s linear; }
+    .services__card:hover {
+      color: white; }
+      .services__card:hover .services__card--header {
+        box-shadow: 0 0 0 23em #0fbcf9; }
+      .services__card:hover .services__card--price {
+        color: white; }
+    .services__card--price {
+      font-size: 70px;
+      color: #0fbcf9;
+      margin: 40px 0;
+      transition: .2s linear; }
+    .services__card sup, .services__card span {
+      font-size: 22px;
+      font-weight: 700; }
+    .services__card li {
+      font-size: 16px;
+      padding: 10px 0;
+      text-transform: uppercase; }
+
+.contact {
+  background: url(/img/bg.png) no-repeat center;
+  padding: 40px 0;
+  background-size: cover; }
+  .contact h1 {
+    color: white; }
+  .contact__border {
+    margin: 30px auto;
+    width: 100px;
+    height: 3px;
+    background: white; }
+  .contact__form {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden; }
+    .contact__form--text {
+      display: block;
+      width: 100%;
+      margin: 15px 0;
+      background: #111;
+      border: 0;
+      padding: 20px 40px;
+      outline: none;
+      color: #ddd;
+      transition: 0.5s linear; }
+      .contact__form--text:focus {
+        box-shadow: 0 0 10px 4px #34495e; }
+    .contact__form textarea {
+      resize: none;
+      height: 100px; }
+
+.footer__logo-box {
+  text-align: center; }
+
+.footer__logo {
+  width: 200px; }
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+  padding: 10px 30px;
+  align-items: center; }
+
+.footer__left {
+  width: 200px; }
+
+.footer__navigation {
+  border-top: 1px solid black;
+  padding-top: 2rem;
+  display: block; }
+
+.footer__list {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  color: white; }
+
+.footer__item {
+  list-style: none; }
+  .footer__item:hover {
+    transform: rotate(5deg) scale(1.5); }
+
+.footer__link {
+  text-decoration: none; }
+
+.footer__right {
+  width: 400px;
+  border-top: 1px solid black;
+  padding-top: 2rem;
+  display: block; }
+
+.footer__copyright {
+  text-align: center;
+  padding: 20px; }
