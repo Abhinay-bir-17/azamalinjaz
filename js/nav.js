@@ -2,7 +2,7 @@ const sections= document.querySelectorAll('section');
 const bubble= document.querySelector('.navigation__bubble');
 const gradients=[
     "linear-gradient(to right top,#642b73,#c6426e)" ,
-    "linear-gradient(to right top,#36d1dc, #5b86e5 )",
+    "linear-gradient(to right top,#36d1dc, #5b86e5)",
     "linear-gradient(to right top,#642b73,#c6426e)",
     "linear-gradient(to right top,#642b73,#c6426e)"
 ];

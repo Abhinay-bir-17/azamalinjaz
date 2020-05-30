@@ -1,14 +1,32 @@
-.heading-primary{
-    color:white;
-    text-transform: uppercase;
+.heading__primary{
 
     &--main{
-        display: block;
         font-size: 6rem;
-        font-weight: 600;
-        letter-spacing: 2;
     }
     &--sub{
-
+        font-size: 4rem;
     }
+}
+
+.heading__secondary{
+    font-size: 3.5rem;
+    &--sub{
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: inline-block;
+        
+    }
+}
+.heading__tertiary{
+    font-size: 2rem;
+}
+.paragraph{
+   font-size: 2rem; 
+}
+.section-question__paragraph{
+    font-size:2.5rem;
+    width: 500px;
+    margin-left: 6rem;
+    margin-top: 4rem;
 }

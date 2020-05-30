@@ -6,16 +6,16 @@
     position: absolute;
     &__nav{
         position: absolute;
-        bottom: 20px;
+        bottom: 2rem;
         left: 50%;
         transform: translateX(-50%);
         display: flex;
         &--bar{                       
-            width: 50px;
-            height: 10px;
-            border: 2px solid #fff;
-            margin: 6px;
-            //cursor: pointer;
+            width: 5rem;
+            height: 1rem;
+            border: .2rem solid $color-white;
+            margin: .6rem;
+            cursor: pointer;
             transition: all 0.7s;
             // &:hover{
             //     background: white;
@@ -44,13 +44,28 @@
     }
     &__slide{
         width: 20%;
-        transition: 0.7s;
-        &--img{
+        transition: 1s;
+        position: relative;
+        &--img{        
             width: 100%;
             height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        &--text{
+            position: absolute;
+            top: 25%;
+            left: 40%;
+            margin: auto;
+            float: center;
+            font-size: 4rem;
+            color: $color-white;
+            font-weight:500;
+            box-shadow: 1rem 1rem 1rem  white;
+            animation:moveInRight 2s ;
+
         }
     }
-
  }
  input[name="r"]{
     position: absolute;
@@ -71,6 +86,33 @@
 //   #r5:checked ~ .s1{
 //     margin-left: -80%;
 //   }
-//   .active{
-//     background: white;             
-//   }
+  .active{
+    background: $color-white;             
+  }
+.s1{
+    background:$color-black;
+    color: $color-white;
+    &__text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        margin: auto;
+        font-size: 3rem;
+        color: $color-secondary-light;
+        width: 100%;
+        h1{
+            margin-bottom: 3rem;
+            letter-spacing: 1rem;
+            position: relative;
+            background: $color-black;
+            animation: introText 5s 1;
+        }
+         
+    }
+      
+}
+.s2{background-image: linear-gradient(to right bottom,rgba(0,0,0,0.7),rgba(0,0,0,0.4)),url(../img/Airshipment.jpg);}   
+.s3{  background-image: linear-gradient(to right bottom,rgba(0,0,0,0.7),rgba(0,0,0,0.4)),url(../img/CustomsClearence.jpg);}
+.s4{  background-image: linear-gradient(to right bottom,rgba(0,0,0,0.7),rgba(0,0,0,0.4)),url(../img/Transportation.jpg);}
+.s5{  background-image: linear-gradient(to right bottom,rgba(0,0,0,0.7),rgba(0,0,0,0.4)),url(../img/Warehousing.jpg);}

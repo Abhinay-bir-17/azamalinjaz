@@ -1,11 +1,24 @@
 .u-center-text { text-align: center !important; }
-.u-notsocenter-text{
-    position: absolute;
-    left: 4%;
-    top: 22%;
-    
+.u-flex-center{
+    display: flex;
+    justify-content: center;
 }
 
+.u-container{
+    position: absolute;
+    top: 15%;
+    width:auto;
+    font-size: 3rem;
+    padding: 0 6rem;
+    color: $color-white;
+    h1{
+        margin-bottom: 2rem;
+    }
+}
+
+.txt-type >.txt{
+    border-right: 0.2rem solid #777;
+}
 .u-margin-bottom-small { margin-bottom: 1.5rem !important; }
 
 .u-margin-bottom-medium {

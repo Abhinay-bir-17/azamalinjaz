@@ -25,9 +25,8 @@
         background-color: #0fbcf9;
         display: inline-block;
         color: #fff;
-        padding: 12px 30px;
-        border-radius: 0 0 20px 20px;
-        font-size: 16px;
+        padding: 1.2rem 3rem;
+        border-radius: 0 0 2rem 3rem;
         text-transform: uppercase;
         font-weight: 600;
         transition: .4s linear;
@@ -37,26 +36,31 @@
         .services__card--header{
             box-shadow: 0 0 0 23em #0fbcf9;
         }
-        color: white;
+        color: $color-white;
         .services__card--price{
-            color: white;
+            color: $color-white;
         }
 
     }
     &--price{        
-        font-size: 70px;
+        font-size: 7rem;
         color: #0fbcf9;
-        margin: 40px 0;
+        margin: 4rem 0;
         transition: .2s linear;
     }
     sup,span{
-        font-size: 22px;
+        font-size: 2.2rem;
         font-weight: 700;
     }
     li{
-        font-size: 16px;
-        padding: 10px 0;
+        font-size: $default-font-size;
+        padding: 1rem 0;
         text-transform: uppercase;      
-    }
+     }
     }
 }
+@media screen and (max-width:1100px){
+    .services__card{
+      flex: 50%;
+    }
+  }

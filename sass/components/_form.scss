@@ -1,41 +1,75 @@
-.contact{
-    background: url(/img/bg.png) no-repeat center;    
-    padding: 40px 0;
-    background-size: cover;
-    h1{
-        color: white;
-
+.contact__page{
+    width: 100%;
+    max-width: 140rem;
+    padding: 5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    &--heading{
+        width: 100%;
+        margin-bottom: 8rem;
+        text-transform: uppercase;
+        color: #322;
     }
-    &__border{
-        margin: 30px auto;
-        width: 100px;
-        height: 3px;
-        background: white; 
-    }
-    &__form{    
-        max-width: 600px;
-        margin: auto;
-        padding: 0 10px;
-        overflow: hidden;
-        &--text{
-            display:block;
-            width: 100%;
-            margin: 15px 0;
-            background: #111;
-            border: 0;
-            padding: 20px 40px;
-            outline: none;
-            color: #ddd;
-            transition: 0.5s linear;
+}
+.contact__info,.contact__form{
+    flex: 1;
 
-            &:focus{
-                box-shadow: 0 0 10px 4px #34495e;
-            }
+}
+.contact__info{
+    &--item{
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+    &--icon{
+        width: 3rem;
+        height: 3rem;   
+    }
+}
+.contact__form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &--text{
+        width: calc(50% - 10px);
+        height: 5rem;
+        padding: 1.2rem;
+        border: none;
+        color: $color-black;
+        margin-bottom: 2rem;
+    }
+    &--message{
+        width: 100%;
+        min-height: 20rem;
+        resize: vertical;
+        max-height: 40rem;
+        padding: 1.2rem;
+        background-color: #222;
+        border: none;
+        color: $color-white;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 980px){
+    .contact__page{
+        max-width: 80rem;
         
-        }
-        textarea{
-            resize: none;
-            height: 100px;
+        &--heading{
+        font-size: 3rem;
+        margin-bottom: 4rem;
+        
+    }
+}
+    .contact__info,.contact__form{
+        flex: 100%;
+        margin-bottom: 3rem;
+
+    }
+    .contact__form{
+        &--text{
+            width: 100%;
         }
     }
 }
