@@ -21,7 +21,7 @@ function navCheck(entries){
             height:coords.height,
             width:coords.width,
             top:coords.top,
-            left:coords.left
+            left: coords.left
         };
         if(entry.isIntersecting){
             bubble.style.setProperty('left',`${directions.left}px`);
@@ -36,3 +36,5 @@ sections.forEach(section =>{
     observer.observe(section);
 });    
 // heloo ithis is nit getting compiled as its nnot scss
+document.querySelector('.burger').addEventListener('click', () => document.querySelector('.navigation__list').classList.toggle('show'));
+      

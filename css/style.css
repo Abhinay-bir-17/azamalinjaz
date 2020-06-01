@@ -5,6 +5,18 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 45%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
@@ -60,11 +72,30 @@ body {
     letter-spacing: 30px;
     margin-bottom: -60px; } }
 
+@media only screen and (max-width: 56.25em) {
+  @keyframes introText {
+    0% {
+      color: black;
+      margin-bottom: -30px; }
+    30% {
+      letter-spacing: 10px;
+      margin-bottom: -30px; }
+    85% {
+      letter-spacing: 5px;
+      margin-bottom: -40px; } } }
+
 .heading__primary--main {
   font-size: 6rem; }
+  @media only screen and (max-width: 37.5em) {
+    .heading__primary--main {
+      font-size: 5rem; } }
 
 .heading__primary--sub {
   font-size: 4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .heading__primary--sub {
+      font-size: 3rem;
+      padding: 0 1rem; } }
 
 .heading__secondary {
   font-size: 3.5rem; }
@@ -82,9 +113,12 @@ body {
 
 .section-question__paragraph {
   font-size: 2.5rem;
-  width: 500px;
+  width: 50%;
   margin-left: 6rem;
   margin-top: 4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .section-question__paragraph {
+      margin-top: 0; } }
 
 .u-center-text {
   text-align: center !important; }
@@ -100,6 +134,9 @@ body {
   font-size: 3rem;
   padding: 0 6rem;
   color: #fff; }
+  @media only screen and (max-width: 37.5em) {
+    .u-container {
+      top: 5%; } }
   .u-container h1 {
     margin-bottom: 2rem; }
 
@@ -199,6 +236,18 @@ body {
     letter-spacing: 30px;
     margin-bottom: -60px; } }
 
+@media only screen and (max-width: 56.25em) {
+  @keyframes introText {
+    0% {
+      color: black;
+      margin-bottom: -30px; }
+    30% {
+      letter-spacing: 10px;
+      margin-bottom: -30px; }
+    85% {
+      letter-spacing: 5px;
+      margin-bottom: -40px; } } }
+
 .section-slideshow {
   background: linear-gradient(to right top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
   height: 85vh; }
@@ -226,6 +275,19 @@ body {
 main {
   margin-top: 9vh; }
 
+.burger {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 101;
+  display: none;
+  color: #fff; }
+  @media only screen and (max-width: 56.25em) {
+    .burger {
+      display: block;
+      position: fixed; } }
+
 .navigation {
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
   position: fixed;
@@ -244,6 +306,9 @@ main {
     align-items: center; }
     .navigation__nav--logo {
       height: 8rem; }
+      @media only screen and (max-width: 75em) {
+        .navigation__nav--logo {
+          height: 7rem; } }
       .navigation__nav--logo:hover {
         cursor: pointer; }
   .navigation__list {
@@ -251,6 +316,29 @@ main {
     display: flex;
     justify-content: space-between;
     width: 50%; }
+    @media only screen and (max-width: 75em) {
+      .navigation__list {
+        width: 60%; } }
+    @media only screen and (max-width: 56.25em) {
+      .navigation__list {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: white;
+        color: black;
+        width: 50%;
+        height: 100vh;
+        border-radius: #ccc 1px solid;
+        opacity: 0.7;
+        transform: translate(-500px);
+        transition: transform 0.6s ease-in-out; } }
+  .navigation__list.show {
+    transform: translateX(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10rem 0; }
   .navigation__item {
     text-transform: uppercase;
     text-decoration: none;
@@ -455,18 +543,24 @@ input[name="r"] {
   .footer__logo-box {
     text-align: center; }
   .footer__logo {
-    width: 25rem;
+    width: 20rem;
     padding: 2rem 0; }
   .footer__container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 2rem auto;
     padding: 1rem 3rem;
     align-items: center; }
+  .footer__left {
+    display: inline-block; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__left {
+        margin: 0 auto;
+        margin-bottom: 2rem; } }
   .footer__navigation {
     border-top: 0.1rem solid #fff;
     padding-top: 2rem;
-    display: block;
     color: #fff; }
   .footer__list {
     display: flex;
@@ -483,7 +577,11 @@ input[name="r"] {
   .footer__right {
     width: 40rem;
     border-top: 0.1rem solid #fff;
-    display: block; }
+    display: inline-block; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__right {
+        width: 100%;
+        margin: 2rem auto; } }
   .footer__copyright {
     text-align: center;
     padding: 2rem;

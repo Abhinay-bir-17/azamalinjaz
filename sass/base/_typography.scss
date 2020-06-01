@@ -2,12 +2,18 @@
 
     &--main{
         font-size: 6rem;
+        @include respond(phone){
+            font-size: 5rem;
+        }
     }
     &--sub{
         font-size: 4rem;
+        @include respond(phone){
+            font-size: 3rem;
+            padding: 0 1rem;
+        }
     }
 }
-
 .heading__secondary{
     font-size: 3.5rem;
     &--sub{
@@ -26,7 +32,11 @@
 }
 .section-question__paragraph{
     font-size:2.5rem;
-    width: 500px;
+    width: 50%;
     margin-left: 6rem;
     margin-top: 4rem;
+    @include respond(phone){
+        margin-top: 0;
+    }
+
 }
